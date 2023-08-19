@@ -194,7 +194,7 @@ def train_epoch(args, model, device, train_loader, optimizer, epoch):
             running_loss = 0.0
     return loss_vec
 
-
+#define a test Fn
 def test(args, model, test_loader):
     device = args['device']
     model.eval()
@@ -214,7 +214,7 @@ def test(args, model, test_loader):
     acc = 100.0*correct/len(test_loader.dataset)
     return test_loss, acc
 
-
+#Training model construction
 class MLP(nn.Module):
     """
     A multi-layer perceptron with dim `dims` with activation between layers.
